@@ -84,7 +84,7 @@ php -S localhost:8000 -t api
 
 ### Test
 Test the API endpoints using [Postman](https://www.postman.com/) or though the [Frontend Application](./public/index.html).
-Remeber to change line no. **365** of `public/index.html` file as per your localhost connection.
+Remember to change line no. **365** of `public/index.html` file as per your localhost connection.
 ```
 .get("http://localhost:8000/post/")
 ```
