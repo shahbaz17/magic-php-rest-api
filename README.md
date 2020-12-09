@@ -77,7 +77,7 @@ php -S localhost:8000 -t api
 | API               | CRUD          | Description  |
 | :-------------     |:-------------:| ------------:|
 | GET /post         | **READ**      | Get the Posts from `posts` table |
-| GET /post{id}     | **READ**      | Get a single Post from `posts` table |
+| GET /post/{id}     | **READ**      | Get a single Post from `posts` table |
 | POST /post        | **CREATE**    | Create a Post and insert into `posts` table |
 | PUT  /post/{id}   | **UPDATE**    | Update the Post in `posts` table |
 | DELETE /post/{id} | **DELETE**    | Delete a Post from `posts` table |

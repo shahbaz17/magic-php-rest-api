@@ -123,7 +123,7 @@ class Post {
             return $this->unprocessableEntityResponse();
         }
 
-        $statement = "
+        $query = "
             UPDATE posts
             SET 
                 title = :title,
@@ -137,7 +137,7 @@ class Post {
         
         if(is_string($author)) {
           try {
-              $statement = $this->db->prepare($statement);
+              $statement = $this->db->prepare($query);
               $statement->execute(array(
                   'id' => (int) $id,
                   'title' => $input['title'],
