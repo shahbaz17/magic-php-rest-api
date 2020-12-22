@@ -1,11 +1,11 @@
 {
   "require": {
-      "vlucas/phpdotenv": "^2.4",
+    "vlucas/phpdotenv": "^2.4",
     "magiclabs/magic-admin-php": "^0.1.1"
   },
   "autoload": {
-      "psr-4": {
-          "Src\\": "src/"
-      }
+    "psr-4": {
+      "Src\\": "src/"
+    }
   }
 }
