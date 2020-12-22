@@ -6,7 +6,7 @@ We will be using [Magic Admin PHP SDK](https://github.com/magiclabs/magic-admin-
 
 The Magic Admin PHP SDK provides convenient ways for developers to interact with Magic API endpoints and an array of utilities to handle [DID Token](https://docs.magic.link/tutorials/decentralized-id).
 
-Please read [dev.to](https://dev.to/shahbaz17/rest-api-with-magic-4d6c-temp-slug-4815677?preview=ea32cb7504bcb003c77c93ea8858e18228297015e50501c204b82a16c7c5e739d92a2eaaa67f68b9de7ef1796c64e712886c1a5d0432df19cfb112e6) to learn more about securing the PHP REST API with Magic.
+Please read https://dev.to/shahbaz17/secure-your-php-rest-api-with-magic-82k to learn more about securing the PHP REST API with Magic.
 
 ### Prerequisites
 
