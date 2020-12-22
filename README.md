@@ -4,7 +4,7 @@ This is a simple [PHP REST API](https://github.com/shahbaz17/php-rest-api) prote
 
 We will be using [Magic Admin PHP SDK](https://github.com/magiclabs/magic-admin-php) in this sample code to protect the PHP REST API.
 
-The Magic Admin PHP SDK provides convenient ways for developers to interact with Magic API endpoints and an array of utilities to handle [DID Token](https://docs.magic.link/tutorials/decentralized-id).
+The Magic Admin PHP SDK provides convenient ways for developers to interact with Magic API endpoints and an array of utilities to handle [DID Token](https://docs.magic.link/decentralized-id).
 
 Please read https://dev.to/shahbaz17/secure-your-php-rest-api-with-magic-82k to learn more about securing the PHP REST API with Magic.
 
