@@ -7,19 +7,19 @@ class Post {
     
     private $db;
     private $requestMethod;
-    private $userId;
+    private $postId;
 
-    public function __construct($db, $requestMethod, $userId) {
+    public function __construct($db, $requestMethod, $postId) {
         $this->db = $db;
         $this->requestMethod = $requestMethod;
-        $this->userId = $userId;
+        $this->postId = $postId;
     }
 
     public function processRequest() {
         switch ($this->requestMethod) {
             case 'GET':
-                if ($this->userId) {
-                    $response = $this->getPost($this->userId);
+                if ($this->postId) {
+                    $response = $this->getPost($this->postId);
                 } else {
                     $response = $this->getAllPosts();
                 };
@@ -28,10 +28,10 @@ class Post {
                 $response = $this->createPost();
                 break;
             case 'PUT':
-                $response = $this->updatePost($this->userId);
+                $response = $this->updatePost($this->postId);
                 break;
             case 'DELETE':
-                $response = $this->deletePost($this->userId);
+                $response = $this->deletePost($this->postId);
                 break;
             default:
                 $response = $this->notFoundResponse();
@@ -48,7 +48,7 @@ class Post {
             SELECT 
               id, title, body, author, author_picture, created_at
             FROM
-              posts;
+              post;
         ";
 
         try {
@@ -81,7 +81,7 @@ class Post {
         }
 
         $query = "
-            INSERT INTO posts 
+            INSERT INTO post 
                 (title, body, author, author_picture)
             VALUES
                 (:title, :body, :author, :author_picture);
@@ -124,7 +124,7 @@ class Post {
         }
 
         $query = "
-            UPDATE posts
+            UPDATE post
             SET 
                 title = :title,
                 body  = :body,
@@ -172,7 +172,7 @@ class Post {
           }
 
           $query = "
-              DELETE FROM posts
+              DELETE FROM post
               WHERE id = :id AND author = :author;
           ";
 
@@ -204,7 +204,7 @@ class Post {
             SELECT 
                 id, title, body, author, author_picture, created_at
             FROM
-                posts
+                post
             WHERE id = :id;
         ";
 
@@ -282,7 +282,6 @@ class Post {
       try {
         $magic->token->validate($did_token);
         $issuer = $magic->token->get_issuer($did_token);
-        // list($proof , $claim) = $magic->token->decode($did_token);
         $user_meta = $magic->user->get_metadata_by_issuer($issuer);
         return $user_meta->data->email;
       } catch (\MagicAdmin\Exception\DIDTokenException $e) {
