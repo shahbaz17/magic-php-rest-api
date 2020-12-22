@@ -111,11 +111,9 @@ php -S localhost:8008 -t api
 | PUT /post/{id}    |            Update the Post in `post` table |
 | DELETE /post/{id} |            Delete a Post from `post` table |
 
-### Test
-
 Test the API endpoints using [Postman](https://www.postman.com/) or though the [Frontend Application](./public/index.html).
 
-Start your Frontend Application:
+### Start your Frontend Application:
 
 ```bash
 php -S localhost:8002 -t public
