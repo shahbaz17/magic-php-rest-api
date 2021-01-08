@@ -54,7 +54,7 @@ CREATE TABLE `post` (
 );
 ```
 
-Copy `.env.example` to `.env` file and enter your database deatils.
+Copy `.env.example` to `.env` file and enter your database details.
 
 ```bash
 cp .env.example .env
@@ -101,6 +101,14 @@ composer install
 php -S localhost:8008 -t api
 ```
 
+Start the Frontend Application: 
+
+```bash
+php -S localhost:8002 -t public
+```
+
+Visit http://localhost:8002 to get the token for testing with Postman.
+
 ## Your APIs
 
 | API               |                                Description |
@@ -112,12 +120,6 @@ php -S localhost:8008 -t api
 | DELETE /post/{id} |            Delete a Post from `post` table |
 
 Test the API endpoints using [Postman](https://www.postman.com/) or though the [Frontend Application](./public/index.html).
-
-### Start your Frontend Application:
-
-```bash
-php -S localhost:8002 -t public
-```
 
 ## License
 
