@@ -75,7 +75,9 @@ class Post {
     }
 
     private function createPost() {
+        
         $input = (array) json_decode(file_get_contents('php://input'), TRUE);
+
         if (! $this->validatePost($input)) {
             return $this->unprocessableEntityResponse();
         }
@@ -108,7 +110,6 @@ class Post {
             return $response;
         } else {
           return $this->didMissing();
-          return $response;
         }
 
     }
@@ -148,7 +149,6 @@ class Post {
               if($statement->rowCount()==0) {
                 // Different Author trying to update.
                 return $this->unauthUpdate();
-                return $response;
               }  
           } catch (\PDOException $e) {
               exit($e->getMessage());
@@ -158,7 +158,6 @@ class Post {
           return $response;
         } else {
           return $this->didMissing();
-          return $response;
         }
         
     }
@@ -182,7 +181,6 @@ class Post {
               if($statement->rowCount()==0) {
                 // Different Author trying to delete.
                 return $this->unauthDelete();
-                return $response;
               }  
           } catch (\PDOException $e) {
               exit($e->getMessage());
@@ -193,7 +191,6 @@ class Post {
         } else {
           // DID Error.
           return $this->didMissing();
-          return $response;
         }
         
     }
@@ -274,7 +271,6 @@ class Post {
       // DIDT is missing from the original HTTP request header. 404: DID Missing
       if ($did_token == null) {
         return $this->didMissing();
-        return $response;
       }
     
       $magic = new \MagicAdmin\Magic(getenv('MAGIC_SECRET_KEY'));
@@ -287,7 +283,6 @@ class Post {
       } catch (\MagicAdmin\Exception\DIDTokenException $e) {
         // DIDT is malformed. 
         return $this->didMissing();
-        return $response;
       }
     }
 }

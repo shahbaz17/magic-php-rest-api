@@ -91,6 +91,8 @@ DB_PASSWORD=rest_api_password
 
 ## Development
 
+### Server (PHP APIs)
+
 Install the project dependencies and start the PHP server:
 
 ```bash
@@ -101,13 +103,16 @@ composer install
 php -S localhost:8008 -t api
 ```
 
-Start the Frontend Application: 
+### Frontend (To get DID Token)
 
-```bash
-php -S localhost:8002 -t public
-```
+To get the DID Token, please follow https://github.com/shahbaz17/magic-didtoken.
 
-Visit http://localhost:8002 to get the token for testing with Postman.
+Or simply deploy your own on Vercel or Netlfiy.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fshahbaz17%2Fmagic-didtoken&env=NEXT_PUBLIC_MAGIC_PUBLISHABLE_KEY,MAGIC_SECRET_KEY) [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/shahbaz17/magic-didtoken)
+
+Frontend would look like https://magic-didtoken.vercel.app
+
+DID Token received will be used in Postman to access the protected API endpoints.
 
 ## Your APIs
 
@@ -119,7 +124,7 @@ Visit http://localhost:8002 to get the token for testing with Postman.
 | PUT /post/{id}    |            Update the Post in `post` table |
 | DELETE /post/{id} |            Delete a Post from `post` table |
 
-Test the API endpoints using [Postman](https://www.postman.com/) or though the [Frontend Application](./public/index.html).
+Test the API endpoints using [Postman](https://www.postman.com/)
 
 ## License
 
