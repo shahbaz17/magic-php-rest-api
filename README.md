@@ -72,11 +72,11 @@ DB_PASSWORD=rest_api_password
 
 ### Get your Magic Secret Key
 
-Sign Up with [Magic](https://dashboard.magic.link/signup) and get your **`MAGIC_SECRET_KEY`**.
+Try Magic for free [here](https://magic.link/invite/r/kpD9rMJFZGPqVvx1) and get your **`MAGIC_SECRET_KEY`**.
 
-Feel free to use the Test Application automatically configured for you, or create a new one from your [Dashboard](https://dashboard.magic.link/app/all_apps).
+Feel free to use the Test Application automatically configured for you, or create a new one from your [Dashboard](https://dashboard.magic.link).
 
-![Dashboard Image goes here](https://dev-to-uploads.s3.amazonaws.com/i/fnjqvscslu11ih87p94t.png)
+![Magic Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yiehdmd2kpokpeom3rqh.png)
 
 `.env` complete
 
