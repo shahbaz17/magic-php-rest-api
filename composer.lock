@@ -4,53 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "245f03fdb15cc8dda73499255a99eada",
+    "content-hash": "63e77e3120bb77ddd8a5f643bade1a05",
     "packages": [
-        {
-            "name": "digitaldonkey/ecverify",
-            "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/digitaldonkey/ecverify.git",
-                "reference": "fe873f7c1d9662bac9fb6d379d1212954b35dcce"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/digitaldonkey/ecverify/zipball/fe873f7c1d9662bac9fb6d379d1212954b35dcce",
-                "reference": "fe873f7c1d9662bac9fb6d379d1212954b35dcce",
-                "shasum": ""
-            },
-            "require": {
-                "kornrunner/keccak": "^1.0",
-                "php": ">=7",
-                "simplito/elliptic-php": "^1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0 || ^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ethereum\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thorsten Krug",
-                    "email": "thorsten.krug@consensys.net"
-                }
-            ],
-            "description": "A library integrating Ethereum with typed PHP.",
-            "support": {
-                "issues": "https://github.com/digitaldonkey/ecverify/issues",
-                "source": "https://github.com/digitaldonkey/ecverify/tree/master"
-            },
-            "time": "2018-05-18T17:55:12+00:00"
-        },
         {
             "name": "graham-campbell/result-type",
             "version": "v1.0.1",
@@ -119,25 +74,24 @@
         },
         {
             "name": "kornrunner/keccak",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kornrunner/php-keccak.git",
-                "reference": "ad761f528f4d1e3ce378b8a0841e5f82c9973535"
+                "reference": "433749d28e117fb97baf9f2631b92b5d9ab3c890"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kornrunner/php-keccak/zipball/ad761f528f4d1e3ce378b8a0841e5f82c9973535",
-                "reference": "ad761f528f4d1e3ce378b8a0841e5f82c9973535",
+                "url": "https://api.github.com/repos/kornrunner/php-keccak/zipball/433749d28e117fb97baf9f2631b92b5d9ab3c890",
+                "reference": "433749d28e117fb97baf9f2631b92b5d9ab3c890",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.0",
+                "php": ">=7.3",
                 "symfony/polyfill-mbstring": "^1.8"
             },
             "require-dev": {
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "~7"
+                "phpunit/phpunit": "^8.2"
             },
             "type": "library",
             "autoload": {
@@ -163,29 +117,30 @@
             ],
             "support": {
                 "issues": "https://github.com/kornrunner/php-keccak/issues",
-                "source": "https://github.com/kornrunner/php-keccak/tree/master"
+                "source": "https://github.com/kornrunner/php-keccak/tree/1.1.0"
             },
-            "time": "2018-07-30T22:16:23+00:00"
+            "time": "2020-12-07T15:40:44+00:00"
         },
         {
             "name": "magiclabs/magic-admin-php",
-            "version": "v0.1.1",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/magiclabs/magic-admin-php.git",
-                "reference": "f8311b3dbef7b060c9e065b71ca9280979b56534"
+                "reference": "3dad1ae9b2f69b8239385b54ddc4ebb05b5f3a13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/magiclabs/magic-admin-php/zipball/f8311b3dbef7b060c9e065b71ca9280979b56534",
-                "reference": "f8311b3dbef7b060c9e065b71ca9280979b56534",
+                "url": "https://api.github.com/repos/magiclabs/magic-admin-php/zipball/3dad1ae9b2f69b8239385b54ddc4ebb05b5f3a13",
+                "reference": "3dad1ae9b2f69b8239385b54ddc4ebb05b5f3a13",
                 "shasum": ""
             },
             "require": {
-                "digitaldonkey/ecverify": "^1.0",
                 "ext-curl": "*",
                 "ext-gmp": "*",
-                "php": ">=5.6.0"
+                "kornrunner/keccak": "^1.1",
+                "php": ">=5.6.0",
+                "simplito/elliptic-php": "^1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.3"
@@ -219,9 +174,9 @@
             ],
             "support": {
                 "issues": "https://github.com/magiclabs/magic-admin-php/issues",
-                "source": "https://github.com/magiclabs/magic-admin-php/tree/v0.1.1"
+                "source": "https://github.com/magiclabs/magic-admin-php/tree/v0.1.2"
             },
-            "time": "2020-12-01T06:18:40+00:00"
+            "time": "2020-12-23T07:54:51+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -376,16 +331,16 @@
         },
         {
             "name": "simplito/elliptic-php",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplito/elliptic-php.git",
-                "reference": "15652609aa55968d56685c2a9120535ccdc00fd9"
+                "reference": "a2612c8289270bd00086d1c070efc3fca9d7abce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplito/elliptic-php/zipball/15652609aa55968d56685c2a9120535ccdc00fd9",
-                "reference": "15652609aa55968d56685c2a9120535ccdc00fd9",
+                "url": "https://api.github.com/repos/simplito/elliptic-php/zipball/a2612c8289270bd00086d1c070efc3fca9d7abce",
+                "reference": "a2612c8289270bd00086d1c070efc3fca9d7abce",
                 "shasum": ""
             },
             "require": {
@@ -434,22 +389,22 @@
             ],
             "support": {
                 "issues": "https://github.com/simplito/elliptic-php/issues",
-                "source": "https://github.com/simplito/elliptic-php/tree/1.0.6"
+                "source": "https://github.com/simplito/elliptic-php/tree/1.0.7"
             },
-            "time": "2019-11-14T13:43:07+00:00"
+            "time": "2021-01-12T11:40:37+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.20.0",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41"
+                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f4ba089a5b6366e453971d3aad5fe8e897b37f41",
-                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/46cd95797e9df938fdd2b03693b5fca5e64b01ce",
+                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce",
                 "shasum": ""
             },
             "require": {
@@ -461,7 +416,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -499,7 +454,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.20.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.23.0"
             },
             "funding": [
                 {
@@ -515,20 +470,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-23T14:02:19+00:00"
+            "time": "2021-02-19T12:13:01+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.20.0",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531"
+                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/39d483bdf39be819deabf04ec872eb0b2410b531",
-                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
+                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
                 "shasum": ""
             },
             "require": {
@@ -540,7 +495,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -579,7 +534,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.20.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.23.0"
             },
             "funding": [
                 {
@@ -595,7 +550,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-23T14:02:19+00:00"
+            "time": "2021-05-27T09:27:20+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
