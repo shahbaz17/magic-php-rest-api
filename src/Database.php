@@ -1,16 +1,17 @@
 <?php
 namespace Src;
 
-class Database {
-
+class Database
+{
     private $dbConnection = null;
 
-    public function __construct(){
-        $host = getenv('DB_HOST');
-        $port = getenv('DB_PORT');
-        $db   = getenv('DB_DATABASE');
-        $user = getenv('DB_USERNAME');
-        $pass = getenv('DB_PASSWORD');
+    public function __construct()
+    {
+        $host = $_ENV['DB_HOST'];
+        $port = $_ENV['DB_PORT'];
+        $db = $_ENV['DB_DATABASE'];
+        $user = $_ENV['DB_USERNAME'];
+        $pass = $_ENV['DB_PASSWORD'];
 
         try {
             $this->dbConnection = new \PDO(
@@ -18,12 +19,13 @@ class Database {
                 $user,
                 $pass
             );
-        } catch (\PDOException $e) {
+        } catch (\PDOException$e) {
             exit($e->getMessage());
         }
     }
 
-    public function connet(){
+    public function connet()
+    {
         return $this->dbConnection;
     }
 }
